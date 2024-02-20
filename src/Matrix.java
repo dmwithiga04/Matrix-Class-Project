@@ -29,7 +29,7 @@ public class Matrix {
     public Matrix (int r, int c) {
 
         // check to see if r and c are positive integers (non-zero)
-        if ((r > 0) && (c>0)) {
+        if ((r>0) && (c>0)) {
 
             // set mtrx to the correct size and assign parameters to the correct variables
             mtrx = new int[r][c];
@@ -56,11 +56,15 @@ public class Matrix {
     public Matrix (Matrix other) {
 
         // set variables in this Matrix in copy of other.
-        mtrx = new int[other.getRows()][getColumns()];
+        mtrx = new int[other.getRows()][other.getColumns()];
+        rows = other.getRows();
+        columns = other.getColumns();
 
         for (int i = 0; i < mtrx.length; i++) {
             for (int j = 0; j < mtrx[i].length; j++) {
-                mtrx[i][j] = other.getElement(i, j);
+
+                // +1 becuase of how the getElement interprates value of rows and columns
+                mtrx[i][j] = other.getElement(i+1, j+1);
             }
         }
 
@@ -83,11 +87,11 @@ public class Matrix {
     //assigns an element in a specified location
     public void setElement (int r, int c, int val) {
 
-        // check element in position and if r and c are positive (non-zero) numbers
-        if ((r>0&&r<rows+1) && (c>0&&c>columns+1)) {
+        // check element in position and if r and c are positive (non-zero) numbers and an index in the array
+        if ((r>0 && c>0) && (r<=rows && c<= columns))  {
             
-        // -1 is used due to the array index starting at 0
-        mtrx[r-1][c-1] = val;
+            // -1 is used due to the array index starting at 0
+            mtrx[r-1][c-1] = val;
 
         }
         // throw exception if element position is invalid as per the above conditions
@@ -98,10 +102,20 @@ public class Matrix {
 
     //returns the value of the element in row r and column c
     public int getElement(int r, int c){
-        // -1 is used due to the array index starting at 0
-        return mtrx[r-1][c-1];
-    }
+        
+        // check element in position and if r and c are positive (non-zero) numbers
+        if ((r>0) && (c>0) && (r<=rows && c<= columns)) {    
+        
+            // -1 is used due to the array index starting at 0
+            return mtrx[r-1][c-1];
+    
+        }
 
+        // throw exception if element position is invalid as per the above conditions
+        else{
+            throw new IllegalArgumentException ("the element does not exist in the position specified");
+        }
+    }
     //return a String representation of the Matrix class to the specifications of the lab
     public String toString(){
         return null;
