@@ -19,5 +19,5 @@ Developed a robust **Matrix Class** in Java, enabling efficient manipulation of 
 
 ## How to Run
 1. Clone the repository.
-2. Compile using a Java IDE or command line with `javac Matrix.java`.
+2. Compile using a Java IDE or command line with `javac Main.java`.
 3. Run unit tests using JUnit to verify functionality.
