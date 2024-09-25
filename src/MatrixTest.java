@@ -6,8 +6,6 @@ import java.util.Scanner;
 
 /**
  * A set of JUnit tests for the Matrix class.
- *
- * @author David Wolff
  */
 public class MatrixTest {
 
