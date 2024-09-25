@@ -1,18 +1,23 @@
-## Getting Started
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+# Matrix Class Project
 
-## Folder Structure
+## Project Overview
+**Feb 2024 - Mar 2024**
 
-The workspace contains two folders by default, where:
+Developed a robust **Matrix Class** in Java, enabling efficient manipulation of matrices. The class facilitates essential matrix operations such as addition, subtraction, multiplication, and transposition. Implemented using Java fundamentals, the Matrix Class leverages primitive data types, control structures, methods, arrays, exceptions, and classes.
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+## Key Features
+- **Matrix Operations:** Supports addition, subtraction, multiplication (element-wise and matrix product), and transposition.
+- **Error Handling:** Includes exception handling for invalid operations like dimension mismatches or non-invertible matrices.
+- **Efficiency:** Uses Java’s primitive data types and arrays for optimal performance in handling matrix calculations.
+- **Test-Driven Development:** Thoroughly tested with unit tests to ensure correctness and reliability.
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+## Tech Stack
+- **Language:** Java
+- **Testing:** JUnit (Test-Driven Development)
+- **Concepts Applied:** Linear Algebra, Object-Oriented Programming (OOP), Error Handling
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
-
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+## How to Run
+1. Clone the repository.
+2. Compile using a Java IDE or command line with `javac Matrix.java`.
+3. Run unit tests using JUnit to verify functionality.
